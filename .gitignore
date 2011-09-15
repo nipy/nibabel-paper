@@ -1,0 +1,8 @@
+code.sty
+*.py.tex
+*.aux
+*.log
+*.out
+*.blg
+*.bbl
+p.pdf

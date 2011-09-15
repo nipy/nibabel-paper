@@ -1,0 +1,15 @@
+NiBabel Paper
+=============
+
+This is becoming a manuscript on NiBabel and its development. To be published
+somewhere. All contributors are invited to participate.
+
+Guidelines
+----------
+
+Keep it simple. If you want to add a code snippet, just add a .py file and
+`\input{}` the corresponding .py.tex in the manuscript -- look inside for an
+example. `make` builds a PDF -- any decent Latex distribution should be
+sufficient. Don't forget to add your name and affiliation. Add references
+to the BIB file. Use natbib style citations.
+

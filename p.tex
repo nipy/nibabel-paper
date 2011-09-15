@@ -1,0 +1,105 @@
+%-*- mode: latex; fill-column: 70 -*-
+% ex: set sts=4 ts=4 sw=4 et tw=70:
+
+\documentclass[twoside=false,fontsize=11pt,pointednumbers,normalheadings,%
+               abstracton,paper=a4,pagesize,pdftex]{scrartcl}
+
+% we need umlauts in the refs
+\usepackage[utf8]{inputenc}
+
+% serif section headings
+\setkomafont{sectioning}{\normalcolor\bfseries}
+\usepackage{authblk}
+\renewcommand\Affilfont{\itshape\small}
+\usepackage{graphicx}
+\usepackage{url}
+% citations
+\usepackage{apacite}
+\usepackage[longnamesfirst,sort&compress]{natbib}
+% for code snippets
+\usepackage{fancyvrb}
+\usepackage{color}
+
+\usepackage[hyperfootnotes=false,
+pdftex,
+pdftitle={},
+pdfauthor={},
+pdfsubject={},
+pdfkeywords={},
+pdfduplex=DuplexFlipLongEdge,
+pdffitwindow=true,
+pdfdisplaydoctitle=true,
+debug=false,
+final=true,
+hyperfigures=true,
+pdfborder={0 0 0}]{hyperref}
+
+\urlstyle{same}
+% howto cite projects
+\newcommand{\purl}[2]{#1\footnote{\url{#2}}}
+
+%% Miscellaneous Latin abbreviations emphasizing
+%% according to
+%% http://en.wikipedia.org/wiki/List_of_Latin_phrases_(C-E)#endnote_egie
+%% ``American style guides tend to recommend that "e.g."  and "i.e."
+%% should generally be followed by a comma, just as "for example" and
+%% "that is" would be; UK style tends to omit the comma''
+\newcommand{\ie}[0]{\emph{i.e.},\ }
+\newcommand{\eg}[0]{\emph{e.g.},\ }
+\newcommand{\etc}[0]{\emph{etc.}}
+
+%% Unified references
+\newcommand{\fig}[1]{{Figure~\ref{fig:#1}}}
+
+% try to put figures and tables close to where they are defined
+% as recommended by GUIDE
+\makeatletter
+\renewcommand{\fps@table}{htbp}
+\renewcommand{\fps@figure}{htbp}
+\makeatother
+
+\title{This is the title}
+
+% if you work on this manuscript, add yourself and your affiliation here
+\author[1]{Matthew~Brett}
+\author[2]{Michael~Hanke}
+
+\affil[1]{Helen Wills Neuroscience Institute, University of California at
+Berkeley, USA}
+\affil[2]{Department of Experimental Psychology, University of Magdeburg,
+Magdeburg, Germany}
+
+% for code snippets
+\input{code.sty}
+
+\begin{document}
+\maketitle
+
+% 5 words
+\texttt{Running title: Invent me}
+
+\section*{Correspondence}
+Matthew Brett\\
+Wherever he may roam\\
+\url{matthew.brett@gmail.com}
+
+\section*{Acknowledgements}
+Thanks the NumPy, ScipPy, \ldots folks.
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% figure out a target journal and the required structure of the manuscript
+
+Let's cite something: \citet{HHS+09b}
+
+% demo code snippet
+\input{img_access.py.tex}
+
+%\bibliographystyle{abbrvnat}
+\bibliographystyle{apacite}
+\bibliography{references}
+
+\end{document}
