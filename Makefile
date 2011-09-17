@@ -11,7 +11,7 @@ p.bbl: p.aux
 	pdflatex -interaction=nonstopmode p.tex
 
 clean:
-	rm -f *.pdf *.aux *.log *.out *.toc *.vrb *.nav *.snm *.py.tex code.sty *.blg
+	rm -f *.pdf *.aux *.log *.out *.toc *.vrb *.nav *.snm *.py.tex code.sty *.blg *.bbl
 
 snippets: code.sty
 	for i in *.py; do $(MAKE) $$i.tex; done
