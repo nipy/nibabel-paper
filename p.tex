@@ -58,16 +58,19 @@ pdfborder={0 0 0}]{hyperref}
 \renewcommand{\fps@figure}{htbp}
 \makeatother
 
-\title{This is the title}
+\title{NiBabel - Access a cacophony of neuro-imaging file formats}
 
 % if you work on this manuscript, add yourself and your affiliation here
 \author[1]{Matthew~Brett}
 \author[2]{Michael~Hanke}
+\author[3]{Stephan~Gerhard}
 
 \affil[1]{Helen Wills Neuroscience Institute, University of California at
 Berkeley, USA}
 \affil[2]{Department of Experimental Psychology, University of Magdeburg,
 Magdeburg, Germany}
+\affil[3]{Institute of Neuroinformatics, University Zurich and Swiss Federal
+Institute of Technology, Zurich, Switzerland}
 
 % for code snippets
 \input{code.sty}
@@ -93,8 +96,79 @@ Thanks the NumPy, ScipPy, \ldots folks.
 
 % figure out a target journal and the required structure of the manuscript
 
+\section{Introduction}
+
+\begin{itemize}
+ \item historical background (PyNifti)
+ \item neuroimaging IO library as basic to build the Python neuroimaging tool stack
+ \item embeddedness in the NIPY project, collaborative effort
+ \item exposing NumPy arrays
+\end{itemize}
+
+\section{Best Practices}
+
+\subsection{Collaborative Software Development}
+
+Git, GitHub, Code Reviews, Mailinglist, ...
+
+\subsection{Test Suite}
+
+Code coverage
+
+\subsection{Distribution}
+
+Release managment, (Neuro)Debian/PyPI, Documentation, ...
+
+\section{Supported File Formats}
+
+\subsection{NifTI1}
+
+\subsection{ANALYZE}
+
+\subsection{GiFTI}
+
+\subsection{PAR/REC}
+
+\subsection{MINC}
+
+\subsection{TrackVis}
+
+\subsection{Freesurfer}
+
+\subsection{Data Format Tools}
+
+\subsection{DICOM}
+
+
+\section{Usage in software projects}
+
+Software projects that depend on or use Nibabel.
+
 Let's cite something: \citet{HHS+09b}
 
+And more:
+Connectome Mapper
+Connectome Viewer
+Data Format Tools
+DiPy
+NiPy
+NiPyPE
+Nitime
+PyHRF
+PyLocator
+PyMVPA
+pyPET
+PyROI
+PySurfer
+
+\section{Future development}
+
+\subsection{NifTI2}
+
+\subsection{CIFTI}
+
+
+\section{Code examples}
 % demo code snippet
 \input{img_access.py.tex}
 
