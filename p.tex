@@ -120,20 +120,23 @@ Magdeburg, Germany}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
 %% The Abstract begins here                 %%
-%%                                          %%  
-%% Please refer to the Instructions for     %%
-%% authors on http://www.biomedcentral.com  %%
-%% and include the section headings         %%
-%% accordingly for your article type.       %%   
 %%                                          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% This should not exceed 350 words and should be structured into separate
+% sections headed Background, Results, Conclusions. Please do not use
+% abbreviations or references in the abstract.
 
 \begin{abstract}
         % Do not use inserted blank lines (ie \\) until main body of text.
 Text for this section.        
 \end{abstract}
 
+
+% Three to ten keywords representing the main content of the article should be
+% given.
+\paragraph{Keywords}
+neuro-imaging, data formats
 
 
 \ifthenelse{\boolean{publ}}{\begin{multicols}{2}}{}
@@ -142,52 +145,53 @@ Text for this section.
 %%                                          %%
 %% The Main Body begins here                %%
 %%                                          %%
-%% Please refer to the instructions for     %%
-%% authors on:                              %%
-%% http://www.biomedcentral.com/info/authors%%
-%% and include the section headings         %%
-%% accordingly for your article type.       %% 
-%%                                          %%
-%% See the Results and Discussion section   %%
-%% for details on how to create sub-sections%%
-%%                                          %%
-%% use \cite{...} to cite references        %%
-%%  \cite{koon} and                         %%
-%%  \cite{oreg,khar,zvai,xjon,schn,pond}    %%
-%%  \nocite{smith,marg,hunn,advi,koha,mouse}%%
-%%                                          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Introduction}
+
+% The Background section should be written in a way that is accessible to
+% researchers without specialist knowledge in that area and must clearly state
+% - and, if helpful, illustrate - the background to the research and its aims.
+% It should clearly described the relevant context and the specific issue
+% which the software described is intended to address.
+\section{Background}
 
 \begin{itemize}
+  \item General problem statement: why we need it, what else is there and did not di the job
  \item historical background (PyNifti)
  \item neuroimaging IO library as basic to build the Python neuroimaging tool stack
  \item embeddedness in the NIPY project, collaborative effort
  \item exposing NumPy arrays
 \end{itemize}
 
-\section{Best Practices}
+
+% This should include a description of the overall architecture of the software
+% implementation, along with details of any critical issues and how they were
+% addressed.
+\section{Implementation}
 
 \subsection{Collaborative Software Development}
 
 Git, GitHub, Code Reviews, Mailinglist, ...
 
-\subsection{Test Suite}
-
-Code coverage
-
-\subsection{Distribution}
+% The Results and Discussion may be combined into a single section or presented
+% separately. They may also be broken into subsections with short, informative
+% headings. In any case what should be described is the functionality of the
+% software together with data on how its performance and functionality compare
+% with and improve on functionally similar existing software. There should then
+% be a discussion of the intended use of the software, and the benefits that
+% are envisioned together, if possible, with an outline for the planned future
+% development of new features.
+\section{Results and Discussion}
 
 Release managment, (Neuro)Debian/PyPI, Documentation, ...
 
-\section{Supported File Formats}
+\subsection{Supported File Formats}
 
-\subsection{NifTI1}
+\subsubsection{NifTI1}
 
-\subsection{ANALYZE}
+\subsubsection{ANALYZE}
 
-\subsection{GiFTI}
+\subsubsection{GiFTI}
 
 Similar to the standarization of volume-based neuroimaging datasets with NifTI1,
 the GiFTI format aims to standardize surface-based neuroimaging datasets.
@@ -207,20 +211,35 @@ files is comparable (Figure?)
 
 Specifications and updates are published on the GiFTI website www.nitrc.org/projects/gifti
 
-\subsection{PAR/REC}
+\subsubsection{PAR/REC}
 
-\subsection{MINC}
+\subsubsection{MINC}
 
-\subsection{TrackVis}
+\subsubsection{TrackVis}
 
-\subsection{Freesurfer}
+\subsubsection{Freesurfer}
 
-\subsection{Data Format Tools}
+\subsubsection{Data Format Tools}
 
-\subsection{DICOM}
+\subsubsection{DICOM}
+
+\subsection{Future development}
+
+\subsubsection{NifTI2}
+
+\subsubsection{CIFTI}
 
 
-\section{Usage in software projects}
+\subsection{Code examples}
+% demo code snippet
+\input{img_access.py.tex}
+
+
+
+
+% This should state clearly the main conclusions of the article and give a
+% clear explanation of the importance and relevance of the software.
+\section{Conclusions}
 
 Software projects that depend on or use Nibabel.
 
@@ -238,17 +257,20 @@ pyPET
 PyROI
 PySurfer
 
-\section{Future development}
 
-\subsection{NifTI2}
+\section{Availability and requirements}
+\begin{description}
+  \item[Project name] NiBabel
+  \item[Project home page] \url{http://www.nipy.org/nibabel}
+  \item[Operating system(s)] Platform independent
+  \item[Programming language] Python
+  \item[Other requirements]
+  \item[License] MIT
+\end{description}
 
-\subsection{CIFTI}
+\section{Competing interests}
 
-
-\section{Code examples}
-% demo code snippet
-\input{img_access.py.tex}
-
+The authors declare that they have no competing interests.
 
 
 \bigskip
@@ -286,6 +308,8 @@ PySurfer
   \bibliography{references} }     % Bibliography file (usually '*.bib' ) 
 
 %%%%%%%%%%%
+
+\appendix
 
 \ifthenelse{\boolean{publ}}{\end{multicols}}{}
 
