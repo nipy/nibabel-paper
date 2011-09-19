@@ -102,7 +102,7 @@
          \email{Matthew Brett\correspondingauthor - matthew.brett@gmail.com}
        \and
          Stephan~Gerhard$^2$ %
-         \email{Stefan Gerhard - FILL IN THE ADDRESS}%
+         \email{Stephan Gerhard - connectome@unidesign.ch}%
        and
          Michael~Hanke$^3$%
          \email{Michael Hanke - michael.hanke@gmail.com}%
@@ -188,6 +188,24 @@ Release managment, (Neuro)Debian/PyPI, Documentation, ...
 \subsection{ANALYZE}
 
 \subsection{GiFTI}
+
+Similar to the standarization of volume-based neuroimaging datasets with NifTI1,
+the GiFTI format aims to standardize surface-based neuroimaging datasets.
+GiFTI stands for Geometry Subcommittee of the Neuroimaging Informatics Technology
+Initiative.
+
+The GiFTI standard contributed to the interoperability of surface-based software tools.
+A number of software tools support the standard, e.g. Freesurfer, BrainVisa, Caret, ...
+(TODO: references)
+
+Several APIs are provided for the languages C, Python-bindings to the C library and for Matlab.
+
+Nibabel aims to be a pure Python library without many dependencies. The parsing and
+writing of the XML-based GiFTI files can be implemented using only Python Standard Library,
+without requiring a dependency on the GiFTI C library. Performance in terms of reading/writing
+files is comparable (Figure?)
+
+Specifications and updates are published on the GiFTI website www.nitrc.org/projects/gifti
 
 \subsection{PAR/REC}
 
